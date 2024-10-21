@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/roseismissingpage/static/css/main.35aaac75.css",
-    "main.js": "/roseismissingpage/static/js/main.5566f0e6.js",
+    "main.css": "/roseismissingpage/static/css/main.56dabe17.css",
+    "main.js": "/roseismissingpage/static/js/main.989ecd25.js",
     "static/js/453.f0c0a966.chunk.js": "/roseismissingpage/static/js/453.f0c0a966.chunk.js",
     "static/media/RoseBackground.jpg": "/roseismissingpage/static/media/RoseBackground.82035173a0447d5fb4a7.jpg",
     "static/media/rose-logo.png": "/roseismissingpage/static/media/rose-logo.ca15fb192e9f20fe84f2.png",
+    "static/media/electric-bunny-logo.png": "/roseismissingpage/static/media/electric-bunny-logo.c675f99bfb927a6fbb86.png",
     "index.html": "/roseismissingpage/index.html",
-    "main.35aaac75.css.map": "/roseismissingpage/static/css/main.35aaac75.css.map",
-    "main.5566f0e6.js.map": "/roseismissingpage/static/js/main.5566f0e6.js.map",
+    "main.56dabe17.css.map": "/roseismissingpage/static/css/main.56dabe17.css.map",
+    "main.989ecd25.js.map": "/roseismissingpage/static/js/main.989ecd25.js.map",
     "453.f0c0a966.chunk.js.map": "/roseismissingpage/static/js/453.f0c0a966.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.35aaac75.css",
-    "static/js/main.5566f0e6.js"
+    "static/css/main.56dabe17.css",
+    "static/js/main.989ecd25.js"
   ]
 }
