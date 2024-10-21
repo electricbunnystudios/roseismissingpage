@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/roseismissingpage/static/css/main.f855e6bc.css",
-    "main.js": "/roseismissingpage/static/js/main.cbcf0501.js",
+    "main.css": "/roseismissingpage/static/css/main.35aaac75.css",
+    "main.js": "/roseismissingpage/static/js/main.5566f0e6.js",
     "static/js/453.f0c0a966.chunk.js": "/roseismissingpage/static/js/453.f0c0a966.chunk.js",
-    "static/media/logo.svg": "/roseismissingpage/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/RoseBackground.jpg": "/roseismissingpage/static/media/RoseBackground.82035173a0447d5fb4a7.jpg",
+    "static/media/rose-logo.png": "/roseismissingpage/static/media/rose-logo.ca15fb192e9f20fe84f2.png",
     "index.html": "/roseismissingpage/index.html",
-    "main.f855e6bc.css.map": "/roseismissingpage/static/css/main.f855e6bc.css.map",
-    "main.cbcf0501.js.map": "/roseismissingpage/static/js/main.cbcf0501.js.map",
+    "main.35aaac75.css.map": "/roseismissingpage/static/css/main.35aaac75.css.map",
+    "main.5566f0e6.js.map": "/roseismissingpage/static/js/main.5566f0e6.js.map",
     "453.f0c0a966.chunk.js.map": "/roseismissingpage/static/js/453.f0c0a966.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.cbcf0501.js"
+    "static/css/main.35aaac75.css",
+    "static/js/main.5566f0e6.js"
   ]
 }
