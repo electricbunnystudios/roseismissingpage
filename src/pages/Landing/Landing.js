@@ -1,37 +1,20 @@
 import React from 'react';
-import styles from './Landing.css';
 import background from '../../resources/RoseBackground.jpg';
 import logo from '../../resources/rose-logo.png';
+import bunny from '../../resources/electric-bunny-logo.png';
+import { SpeakerWaveIcon } from '@heroicons/react/24/solid';
 
 function Landing() {
-  const menuStyle = {display: "flex", flexDirection: "column", backgroundColor: "transparent"};
-  const itemStyle = {padding: "10px"};
 
   return (
     <>
-    {/**
-    <section>
-      <div style={{height: "100%", width: "100%", backgroundImage: `url(${background})`}}>
-        <img src={logo} alt={""} />
-          <a href={"#about"}>
-              <div className={"banner-scroll"}>
-                  <span/>
-                  <span/>
-                  <span/>
-              </div>
-          </a>
-      </div>
-    </section>
-     */}
-
     <div className="relative h-screen w-full">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${background})` }}
-      ></div>
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      />
       <div className="relative z-5 flex h-full items-center justify-center">
-        <div className="rounded-full relative -mt-64">
+        <div className="relative -mt-64">
           <img
             src={logo}
             alt="Company Logo"
@@ -39,6 +22,23 @@ function Landing() {
           />
         </div>
       </div>
+      <div className="absolute bottom-16 left-16">
+        <img
+          src={bunny}
+          alt="Bottom Left Icon"
+          className="h-32 w-32 object-contain"
+        />
+      </div>
+      <div className="absolute bottom-16 right-16 flex items-center space-x-2">
+        <span className="text-white text-lg text-right">activá el sonido para una <br/>mejor experiencia</span>
+        <SpeakerWaveIcon className="h-8 w-auto text-white" />
+      </div>
+    </div>
+    <div className="relative h-screen w-full">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundColor: "#091915" }}
+      />
     </div>
     </>
   );
