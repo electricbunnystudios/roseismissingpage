@@ -1,16 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import background from '../../resources/RoseBackground.jpg';
 import logo from '../../resources/rose-logo.png';
 import bunny from '../../resources/electric-bunny-logo.png';
 import comic from '../../resources/comic.png';
 import instaLogo from '../../resources/instagram-logo.png';
+import elevator from '../../resources/elevator.mp3';
 import { SpeakerWaveIcon, SpeakerXMarkIcon } from '@heroicons/react/24/solid';
+
 
 function Landing() {
   const [isVolumeOn, setIsVolumeOn] = useState(false);
+  const audioRef = useRef(null);
+
+  const SpeakerClicked = () => {
+  
+    if(isVolumeOn){
+      if(audioRef.current)
+      {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+    }
+    else
+    {
+      if(audioRef.current)
+      {
+        audioRef.current.play();
+      }
+    }
+    setIsVolumeOn(!isVolumeOn);
+  }
 
   return (
     <>
+      <audio ref={audioRef} autoPlay loop>
+          <source src={elevator} type="audio/mpeg" />
+          Your browser does not support the audio element.
+      </audio>
       <div className="relative h-screen w-full">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -48,8 +74,8 @@ function Landing() {
         </div>
         <div className="absolute bottom-8 right-8 flex items-center space-x-2" >
           <span className="text-white text-xs text-right">activá el sonido para una <br/>mejor experiencia</span>
-          <SpeakerWaveIcon className="h-5 w-auto text-white cursor-pointer" style={{display: !isVolumeOn ? "none" : ""}} onClick={() => setIsVolumeOn(!isVolumeOn)}/>
-          <SpeakerXMarkIcon className="h-5 w-auto text-white cursor-pointer" style={{display: isVolumeOn ? "none" : ""}} onClick={() => setIsVolumeOn(!isVolumeOn)}/>
+          <SpeakerWaveIcon className="h-5 w-auto text-white cursor-pointer" style={{display: !isVolumeOn ? "none" : ""}} onClick={() => SpeakerClicked()}/>
+          <SpeakerXMarkIcon className="h-5 w-auto text-white cursor-pointer" style={{display: isVolumeOn ? "none" : ""}} onClick={() => SpeakerClicked()}/>
         </div>
       </div>
 
@@ -59,7 +85,7 @@ function Landing() {
           style={{ backgroundColor: "#091915" }}
         />
         
-        <div className="flex w-1/2 flex-col items-center justify-between p-8">
+        <div className="flex w-1/2 flex-col items-start justify-between p-8">
           
           <div className="relative flex w-full">
             <a
@@ -77,10 +103,10 @@ function Landing() {
             </a>
           </div>
 
-          <div className="relative w-full text-white text-left text-3xl mb-4">
+          <div className="relative w-full text-white text-left text-lg mb-4">
             NOMBRE DE LA HISTORIETA
           </div>
-          <div className="relative w-full text-white text-left text-lg mb-8">
+          <div className="relative w-full text-white text-left text-lg mb-8 max-w-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
@@ -99,8 +125,8 @@ function Landing() {
           
 
           <div className="relative flex items-center w-full" >
-            <SpeakerWaveIcon className="h-5 text-white cursor-pointer" style={{display: !isVolumeOn ? "none" : ""}} onClick={() => setIsVolumeOn(!isVolumeOn)}/>
-            <SpeakerXMarkIcon className="h-5 text-white cursor-pointer" style={{display: isVolumeOn ? "none" : ""}} onClick={() => setIsVolumeOn(!isVolumeOn)}/>
+            <SpeakerWaveIcon className="h-5 text-white cursor-pointer" style={{display: !isVolumeOn ? "none" : ""}} onClick={() => SpeakerClicked()}/>
+            <SpeakerXMarkIcon className="h-5 text-white cursor-pointer" style={{display: isVolumeOn ? "none" : ""}} onClick={() => SpeakerClicked()}/>
             <span className="text-white text-xs text-left ml-2">activá el sonido para una <br/>mejor experiencia</span>
           </div>
 
