@@ -25,6 +25,7 @@ function Landing() {
     {
       if(audioRef.current)
       {
+        audioRef.current.volume = 0.03;
         audioRef.current.play();
       }
     }
