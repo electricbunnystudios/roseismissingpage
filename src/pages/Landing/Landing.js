@@ -3,6 +3,7 @@ import background from '../../resources/RoseBackground.jpg';
 import logo from '../../resources/rose-logo.png';
 import bunny from '../../resources/electric-bunny-logo.png';
 import comic from '../../resources/comic.png';
+import comic2 from '../../resources/comic2.png';
 import instaLogo from '../../resources/instagram-logo.png';
 import backmusic from '../../resources/background.wav';
 import { SpeakerWaveIcon, SpeakerXMarkIcon } from '@heroicons/react/24/solid';
@@ -15,7 +16,7 @@ function Landing() {
 
   const images = [
     comic,
-    background,
+    comic2,
   ]
 
   const goToPrevious = () => {
