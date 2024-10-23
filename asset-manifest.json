@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/roseismissingpage/static/css/main.9bf365ae.css",
-    "main.js": "/roseismissingpage/static/js/main.91889aae.js",
+    "main.css": "/roseismissingpage/static/css/main.c0f354fb.css",
+    "main.js": "/roseismissingpage/static/js/main.0c9cfdd1.js",
     "static/js/453.f0c0a966.chunk.js": "/roseismissingpage/static/js/453.f0c0a966.chunk.js",
-    "static/media/elevator.mp3": "/roseismissingpage/static/media/elevator.d4ab070f6d0258b3f5b9.mp3",
+    "static/media/background.wav": "/roseismissingpage/static/media/background.a488098753c84e48685a.wav",
     "static/media/RoseBackground.jpg": "/roseismissingpage/static/media/RoseBackground.82035173a0447d5fb4a7.jpg",
     "static/media/comic.png": "/roseismissingpage/static/media/comic.fc8746c2d04da02ad8a4.png",
+    "static/media/comic2.png": "/roseismissingpage/static/media/comic2.babab33e380e70812840.png",
     "static/media/rose-logo.png": "/roseismissingpage/static/media/rose-logo.ca15fb192e9f20fe84f2.png",
     "static/media/electric-bunny-logo.png": "/roseismissingpage/static/media/electric-bunny-logo.c675f99bfb927a6fbb86.png",
     "static/media/instagram-logo.png": "/roseismissingpage/static/media/instagram-logo.7a92d6e40fee71189573.png",
     "index.html": "/roseismissingpage/index.html",
-    "main.9bf365ae.css.map": "/roseismissingpage/static/css/main.9bf365ae.css.map",
-    "main.91889aae.js.map": "/roseismissingpage/static/js/main.91889aae.js.map",
+    "main.c0f354fb.css.map": "/roseismissingpage/static/css/main.c0f354fb.css.map",
+    "main.0c9cfdd1.js.map": "/roseismissingpage/static/js/main.0c9cfdd1.js.map",
     "453.f0c0a966.chunk.js.map": "/roseismissingpage/static/js/453.f0c0a966.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9bf365ae.css",
-    "static/js/main.91889aae.js"
+    "static/css/main.c0f354fb.css",
+    "static/js/main.0c9cfdd1.js"
   ]
 }
