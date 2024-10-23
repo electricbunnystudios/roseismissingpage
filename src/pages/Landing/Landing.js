@@ -4,14 +4,32 @@ import logo from '../../resources/rose-logo.png';
 import bunny from '../../resources/electric-bunny-logo.png';
 import comic from '../../resources/comic.png';
 import instaLogo from '../../resources/instagram-logo.png';
-import elevator from '../../resources/elevator.mp3';
+import backmusic from '../../resources/background.wav';
 import { SpeakerWaveIcon, SpeakerXMarkIcon } from '@heroicons/react/24/solid';
-
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
 
 function Landing() {
   const [isVolumeOn, setIsVolumeOn] = useState(false);
   const audioRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0)
 
+  const images = [
+    comic,
+    background,
+  ]
+
+  const goToPrevious = () => {
+    const isFirstSlide = currentIndex === 0
+    const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1
+    setCurrentIndex(newIndex)
+  }
+
+  const goToNext = () => {
+    const isLastSlide = currentIndex === images.length - 1
+    const newIndex = isLastSlide ? 0 : currentIndex + 1
+    setCurrentIndex(newIndex)
+  }
+  
   const SpeakerClicked = () => {
   
     if(isVolumeOn){
@@ -35,7 +53,7 @@ function Landing() {
   return (
     <>
       <audio ref={audioRef} autoPlay loop>
-          <source src={elevator} type="audio/mpeg" />
+          <source src={backmusic} type="audio/mpeg" />
           Your browser does not support the audio element.
       </audio>
       <div className="relative h-screen w-full">
@@ -69,11 +87,11 @@ function Landing() {
             <img
               src={bunny}
               alt="Bottom Left Icon"
-              className="h-32 w-32 object-contain"
+              className="h-32 w-32 object-contain ml-12"
             />
           </a>
         </div>
-        <div className="absolute bottom-8 right-8 flex items-center space-x-2" >
+        <div className="absolute bottom-8 right-8 flex items-center space-x-2 mr-12" >
           <span className="text-white text-xs text-right">activá el sonido para una <br/>mejor experiencia</span>
           <SpeakerWaveIcon className="h-5 w-auto text-white cursor-pointer" style={{display: !isVolumeOn ? "none" : ""}} onClick={() => SpeakerClicked()}/>
           <SpeakerXMarkIcon className="h-5 w-auto text-white cursor-pointer" style={{display: isVolumeOn ? "none" : ""}} onClick={() => SpeakerClicked()}/>
@@ -86,7 +104,7 @@ function Landing() {
           style={{ backgroundColor: "#091915" }}
         />
         
-        <div className="flex w-1/2 flex-col items-start justify-between p-8">
+        <div className="flex w-1/2 flex-col items-start justify-between p-8 ml-16">
           
           <div className="relative flex w-full">
             <a
@@ -103,22 +121,24 @@ function Landing() {
               <span className="text-white text-3xl text-left ml-2">electricbunny.studios</span>
             </a>
           </div>
+          <div>
+            <div className="relative w-full text-white text-left text-lg mb-4">
+              NOMBRE DE LA HISTORIETA
+            </div>
+            <div className="relative w-full text-white text-left text-lg mb-8 max-w-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+              esse cillum dolore eu fugiat nulla pariatur. 
+            </div>
+          </div>
 
-          <div className="relative w-full text-white text-left text-lg mb-4">
-            NOMBRE DE LA HISTORIETA
-          </div>
-          <div className="relative w-full text-white text-left text-lg mb-8 max-w-md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur. 
-          </div>
           <div className="relative w-full">
             <a
               href="https://www.instagram.com/electricbunny.studios"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-64 text-center bg-white text-black py-3 rounded-md font-bold"
+              className="block w-56 text-center bg-white text-black py-3 rounded-md font-bold"
             >
               IR A NUESTRO PERFIL
             </a>
@@ -134,11 +154,37 @@ function Landing() {
         </div>
 
         <div className="relative flex w-1/2 items-center justify-center">
-          <img
+        
+        
+          <div className="relative w-full max-w-1/2 max-h-1/2 mr-36">
+            <div className="relative w-full h-full flex justify-center">
+              <img
+                src={images[currentIndex]}
+                alt={`Slide ${currentIndex + 1}`}
+                className="h-full object-fit rounded-lg"
+              />
+            </div>
+            <button
+              onClick={goToPrevious}
+              className="absolute -left-20 top-1/2 -translate-y-1/2 bg-white/80 text-gray-800 p-2 rounded-full hover:bg-white"
+              aria-label="Previous image"
+            >
+              <ChevronLeftIcon className="w-8 h-8" />
+            </button>
+            <button
+              onClick={goToNext}
+              className="absolute -right-20 top-1/2 -translate-y-1/2 bg-white/80 text-gray-800 p-2 rounded-full hover:bg-white"
+              aria-label="Next image"
+            >
+              <ChevronRightIcon className="w-8 h-8" />
+            </button>
+          </div>
+          
+          {/*<img
             src={comic}
             alt="comic"
             className="rounded-lg object-cover h-4/5 "
-          />
+          />*/}
         </div>
 
       </div>
