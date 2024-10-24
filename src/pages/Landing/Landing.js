@@ -152,7 +152,7 @@ function Landing() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center p-4 lg:w-1/2">
+        <div className="flex items-center justify-center p-4 lg:w-1/2 mb-12 md:mb-0">
           <div className="relative w-full max-w-2x1"
                 onMouseEnter={()=>setMouseOver(true)}
                 onMouseLeave={()=>setMouseOver(false)}>
@@ -162,6 +162,16 @@ function Landing() {
                 alt={`Slide ${currentIndex + 1}`}
                 className="absolute inset-0 w-full h-full object-contain rounded-lg"
               />
+            </div>
+            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {images.map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-2 h-2 rounded-full ${
+                    index === currentIndex ? 'bg-white' : 'bg-white/50'
+                  }`}
+                ></div>
+              ))}
             </div>
             <button
               onClick={goToPrevious}
