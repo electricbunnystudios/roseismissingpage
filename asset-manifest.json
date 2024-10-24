@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/roseismissingpage/static/css/main.421bbb21.css",
-    "main.js": "/roseismissingpage/static/js/main.7815a20c.js",
+    "main.css": "/roseismissingpage/static/css/main.c0a44891.css",
+    "main.js": "/roseismissingpage/static/js/main.4263e02b.js",
     "static/js/453.f0c0a966.chunk.js": "/roseismissingpage/static/js/453.f0c0a966.chunk.js",
     "static/media/background.wav": "/roseismissingpage/static/media/background.a488098753c84e48685a.wav",
     "static/media/ROSE02.jpg": "/roseismissingpage/static/media/ROSE02.471fd8cb987f1426806c.jpg",
@@ -13,12 +13,12 @@
     "static/media/electric-bunny-logo.png": "/roseismissingpage/static/media/electric-bunny-logo.c675f99bfb927a6fbb86.png",
     "static/media/instagram-logo.png": "/roseismissingpage/static/media/instagram-logo.7a92d6e40fee71189573.png",
     "index.html": "/roseismissingpage/index.html",
-    "main.421bbb21.css.map": "/roseismissingpage/static/css/main.421bbb21.css.map",
-    "main.7815a20c.js.map": "/roseismissingpage/static/js/main.7815a20c.js.map",
+    "main.c0a44891.css.map": "/roseismissingpage/static/css/main.c0a44891.css.map",
+    "main.4263e02b.js.map": "/roseismissingpage/static/js/main.4263e02b.js.map",
     "453.f0c0a966.chunk.js.map": "/roseismissingpage/static/js/453.f0c0a966.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.421bbb21.css",
-    "static/js/main.7815a20c.js"
+    "static/css/main.c0a44891.css",
+    "static/js/main.4263e02b.js"
   ]
 }
