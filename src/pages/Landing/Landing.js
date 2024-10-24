@@ -175,7 +175,7 @@ function Landing() {
             </div>
             <button
               onClick={goToPrevious}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 text-gray-800 p-2 rounded-full hover:bg-white"
+              className="absolute left-0 md:left-20 top-1/2 -translate-y-1/2 bg-white/80 text-gray-800 p-2 rounded-full hover:bg-white"
               aria-label="Previous image"
               style={{display: mouseOver? "" : "none"}}
             >
@@ -183,7 +183,7 @@ function Landing() {
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 text-gray-800 p-2 rounded-full hover:bg-white"
+              className="absolute right-0 md:right-20 top-1/2 -translate-y-1/2 bg-white/80 text-gray-800 p-2 rounded-full hover:bg-white"
               aria-label="Next image"
               style={{display: mouseOver? "" : "none"}}
             >
