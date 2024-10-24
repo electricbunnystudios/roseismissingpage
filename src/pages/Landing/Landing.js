@@ -70,7 +70,7 @@ function Landing() {
           style={{ backgroundImage: `url(${background})` }}
         />
         <div className="relative z-10 flex h-full flex-col items-center justify-between p-8">
-          <div className="mt-16 sm:mt-32">
+          <div className="mt-32 sm:mt-16">
             <a
               href="https://www.instagram.com/electricbunny.studios"
               target="_blank"
@@ -79,7 +79,7 @@ function Landing() {
             >
               <img
                 src={logo}
-                alt="Company Logo"
+                alt="Game Logo"
                 className="h-32 w-32 sm:h-64 sm:w-64 object-contain"
               />
             </a>
