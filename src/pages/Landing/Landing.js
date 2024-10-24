@@ -152,11 +152,11 @@ function Landing() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center p-4 lg:w-1/2 touch-pan-x">
-          <div className="relative w-full max-w-2x1 touch-pan-x"
+        <div className="flex items-center justify-center p-4 lg:w-1/2">
+          <div className="relative w-full max-w-2x1"
                 onMouseEnter={()=>setMouseOver(true)}
                 onMouseLeave={()=>setMouseOver(false)}>
-            <div className="relative w-full pb-[80%] touch-pan-x">
+            <div className="relative w-full sm:pb-[80%] pb-[100%]">
               <img
                 src={images[currentIndex]}
                 alt={`Slide ${currentIndex + 1}`}
